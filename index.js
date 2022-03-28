@@ -7,3 +7,11 @@
 const generateNum = () => {
   return Math.floor(Math.random() * 7);
 };
+
+const userSelectsDoor = () => {
+  console.log("clicked");
+};
+
+Array.from(document.querySelectorAll(".doors p")).forEach((door) =>
+  door.addEventListener("click", userSelectsDoor)
+);
