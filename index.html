@@ -9,6 +9,13 @@
   </head>
   <body>
     <h1>The Monty Hall Problem</h1>
+    <p>
+      The Monty Hall problem is a probability puzzle that catches many people
+      out when first encountered. Vos Savant presented a solution that was,
+      initially, rejected in the popular media of the day.
+    </p>
+    <p>This program demonstrates that Vos Savant is correct.</p>
+    <span class="message"></span>
     <div class="doors">
       <p id="0">?</p>
       <p id="1">?</p>
@@ -19,7 +26,7 @@
       <p id="6">?</p>
       <p id="7">?</p>
     </div>
-    <p><span>8</span> guesses left!</p>
+    <p><span id="guessed">8</span> guesses left!</p>
     <table>
       <tr>
         <th>Attempt</th>
@@ -27,22 +34,26 @@
       </tr>
       <tr>
         <td>First</td>
-        <td id="first"></td>
+        <td class="result"></td>
       </tr>
       <tr>
         <td>Second</td>
-        <td id="second"></td>
+        <td class="result"></td>
       </tr>
       <tr>
         <td>Third</td>
-        <td id="third"></td>
+        <td class="result"></td>
       </tr>
       <tr>
         <td>Fourth</td>
-        <td id="fourth"></td>
+        <td class="result"></td>
       </tr>
       <tr>
         <td>Fifth</td>
+        <td class="result"></td>
+      </tr>
+      <tr>
+        <td>Sixth</td>
         <td id="fifth"></td>
       </tr>
     </table>

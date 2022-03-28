@@ -1,14 +1,22 @@
 .doors {
   display: flex;
+  text-align: center;
 }
 
 .doors p {
   border: 3px solid;
-  height: 6em;
+  border-radius: 30px 30px 0 0;
+  padding-top: 2em;
+  height: 3.5em;
   width: 3em;
   margin: 5px;
 }
 
 table {
   border: 1px solid;
+}
+
+th {
+  padding: 3px 7px;
+  border-bottom: 1px dashed;
 }
