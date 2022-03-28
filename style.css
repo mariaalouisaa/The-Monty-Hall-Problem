@@ -1,0 +1,10 @@
+.doors {
+  display: flex;
+}
+
+.doors p {
+  border: 3px solid black;
+  height: 6em;
+  width: 3em;
+  margin: 5px;
+}
