@@ -7,7 +7,7 @@ The Monty Hall problem is a probability puzzle that catches many people out when
 3. The host then asks: Do you want to stick with your original door or switch?
 4. Your odds are BETTER if you switch!
 
-WHY?! Because your odds go from a 2/3 chance to 1/3. Don't believe me... play with the demo I created in this repo.
+WHY?! Because your odds go from a 1/3 chance to 2/3. Don't believe me... play with the demo I created in this repo.
 
 
 #### Screenshot: 
