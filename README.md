@@ -2,16 +2,18 @@
 
 The Monty Hall problem is a probability puzzle that catches many people out when first encountered. Vos Savant presented a solution that was, initially, rejected in the popular media of the day.
 
-**Task:**
-Write a program that demonstrates that Vos Savant is correct. You will use the output of your program to convince your interviewer that, after the host opens a door, switching doors is always the correct choice.
+1. Imagine you are on a gameshow! You are presented with three doors, there is a prize behind only one.
+2. You pick a door, but the host does not open it yet. The host opens a different door to the one you selected.
+3. The host then asks: Do you want to stick with your original door or switch?
+4. Your odds are BETTER if you switch!
 
----
+WHY?! Because your odds go from a 1/3 chance to 2/3. Don't believe me... play with the demo I created in this repo.
 
-You will need to:
 
-- [ ] Gain an understanding of the problem - perhaps see how your friends react if you play the part of the host.
-- [ ] Convince yourself that Vos Savant was correct.
-- [ ] Design and write software that will run sample games employing either the stick or switch strategy.
-- [ ] Put the code in a public GitHub repository
-- [ ] Use your software to show that switching doors is statistically the best option.
-- [ ] The elegance of the output is not important so long as the program can be used to prove the point.
+#### Screenshot: 
+<img width="926" alt="Untitled" src="https://user-images.githubusercontent.com/82417131/160517617-f2e10049-1fd4-4bc9-8428-2e16626ebc84.png">
+
+
+Hosted on GitHub pages https://mariaalouisaa.github.io/The-Monty-Hall-Problem/
+
+Designed, coded and maintained entirely by myself.
