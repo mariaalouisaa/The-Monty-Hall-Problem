@@ -7,17 +7,19 @@ const generateNum = () => {
   return Math.floor(Math.random() * 2);
 };
 
-const getNumbers = () => {
+const getWinningDoor = () => {
   correctDoor = generateNum();
-  hostsDoor = generateNum();
-  if (correctDoor === hostsDoor) {
-    do {
-      hostsDoor = generateNum();
-    } while (correctDoor === hostsDoor);
-  }
 };
 
 const hostsPick = () => {
+  let userPick = Number(document.querySelector("#firstpick").value) - 1; //minus 1 to match array index & door ID's
+  hostsDoor = generateNum();
+  if (hostsDoor === correctDoor || hostsDoor === userPick) {
+    do {
+      hostsDoor = generateNum();
+    } while (hostsDoor === correctDoor || hostsDoor === userPick);
+  }
+
   hostsDoor === correctDoor
     ? (doors[hostsDoor].innerHTML = "Prize!")
     : (doors[hostsDoor].innerHTML = "No Prize");
@@ -31,13 +33,6 @@ const userSelectsDoor = (e) => {
   }
 };
 
-const resetCards = () => {
-  setTimeout(() => {
-    doors.forEach((door) => (door.style.background = "none"));
-    number = generateNum();
-  }, 1000);
-};
-
 doors.forEach((door) => door.addEventListener("click", userSelectsDoor));
 
 document.querySelector(".host").addEventListener("click", hostsPick);
@@ -45,8 +40,8 @@ document.querySelector(".host").addEventListener("click", hostsPick);
 document.querySelector(".replay").addEventListener("click", () => {
   doors.forEach((door) => {
     door.innerHTML = "?";
-    getNumbers();
+    getWinningDoor();
   });
 });
 
-getNumbers();
+getWinningDoor();
