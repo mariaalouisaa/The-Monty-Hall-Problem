@@ -1,23 +1,33 @@
 const doors = Array.from(document.querySelectorAll(".doors p"));
 
+let correctDoor;
+let hostsDoor;
+
 const generateNum = () => {
   return Math.floor(Math.random() * 2);
 };
 
-let correctDoor = generateNum();
-let hostsDoor = generateNum();
+const getNumbers = () => {
+  correctDoor = generateNum();
+  hostsDoor = generateNum();
+  if (correctDoor === hostsDoor) {
+    do {
+      hostsDoor = generateNum();
+    } while (correctDoor === hostsDoor);
+  }
+};
 
 const hostsPick = () => {
   hostsDoor === correctDoor
-    ? (doors[hostsDoor].innerHTML = "Car")
-    : (doors[hostsDoor].innerHTML = "Pen");
+    ? (doors[hostsDoor].innerHTML = "Prize!")
+    : (doors[hostsDoor].innerHTML = "No Prize");
 };
 
 const userSelectsDoor = (e) => {
   if (Number(e.target.id) === correctDoor) {
-    e.target.style.background = "green";
+    e.target.innerHTML = "Prize!";
   } else {
-    e.target.style.background = "red";
+    e.target.innerHTML = "No Prize";
   }
 };
 
@@ -28,12 +38,15 @@ const resetCards = () => {
   }, 1000);
 };
 
-const eightGuessed = () => {
-  //update table
-};
-
 doors.forEach((door) => door.addEventListener("click", userSelectsDoor));
 
-setTimeout(() => {
-  hostsPick();
-}, 1500);
+document.querySelector(".host").addEventListener("click", hostsPick);
+
+document.querySelector(".replay").addEventListener("click", () => {
+  doors.forEach((door) => {
+    door.innerHTML = "?";
+    getNumbers();
+  });
+});
+
+getNumbers();

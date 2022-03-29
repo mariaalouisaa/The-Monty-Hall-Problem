@@ -11,12 +11,3 @@
   width: 3em;
   margin: 5px;
 }
-
-table {
-  border: 1px solid;
-}
-
-th {
-  padding: 3px 7px;
-  border-bottom: 1px dashed;
-}
